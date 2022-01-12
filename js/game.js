@@ -403,7 +403,7 @@ var interval = setInterval(function() {
 	if (gameEnded&&!player.keepGoing) return;
 	ticking = true
 	let now = Date.now()
-	app.rawDiff += ((rawDiff = diff = (now - player.time) / 1e3) - app.rawDiff) / 2
+	app.rawDiff += ((rawDiff = diff = (now - player.time) / 1) - app.rawDiff) / 2
 	if (player.offTime !== undefined) {
 		if (player.offTime.remain > modInfo.offlineLimit * 3600) player.offTime.remain = modInfo.offlineLimit * 3600
 		if (player.offTime.remain > 0) {
